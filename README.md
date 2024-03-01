@@ -1,2 +1,2 @@
 # HAIDES
-implementation and experimets for HAIDES
+implementation and experimemts for HAIDES
