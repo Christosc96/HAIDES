@@ -160,7 +160,6 @@ class HaidesBucketter(Bucketter):
         
         if(self.init == 'KMEANS'):
             km = sklearn.cluster.KMeans(n_clusters = int(nb_buckets), verbose=1, max_iter = 1, n_jobs=-1, n_init = 1, init = 'k-means++')
-            #km = sklearn.cluster.MiniBatchKMeans(n_clusters = nb_buckets, verbose=0, init_size = 3*nb_buckets, batch_size=1024)
             km.fit(node.embeddings)
             '''
             find representative data points
