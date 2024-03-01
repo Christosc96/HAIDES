@@ -1,0 +1,4 @@
+.ipynb_checkpoints/
+tasti/__pycache__/*
+tasti/examples/__pycache__/*
+tasti/examples/cache/*
