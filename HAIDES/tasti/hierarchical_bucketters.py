@@ -574,16 +574,18 @@ class HaidesBucketter(Bucketter):
 
         hoo_result_reps= self.topdepthreps[np.arange(len(self.topdepthreps)), self.depth_indexes]
         hoo_result_dists= self.topdepthdists[np.arange(len(self.topdepthdists)), self.depth_indexes]
+        
+        col_limit = total_reps - len(self.col_indexes)
 
         for idx in self.col_indexes:
+            if(col_limit > max_reps):
+                print("Total Oracle Calls:", col_limit)
+                break
             hoo_result_reps[idx] = idx
             hoo_result_dists[idx] = 0.0
+            col_limit+=1
 
-        print("leaf embeddings:", len(self.col_indexes))    
-        print(hoo_result_reps[:5])
-        print("mean hoo distance", np.mean(hoo_result_dists))
-        
-        print("total reps", len(np.unique(hoo_result_reps)))
+        print("leaf embeddings:", len(self.col_indexes)) 
 
         topk_reps = hoo_result_reps
         topk_dists = hoo_result_dists
