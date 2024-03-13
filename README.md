@@ -7,11 +7,11 @@ HAIDES is implemented on top of TASTI in order to allow for aadptive indexes at 
 
 To install, run 
 
-'''
+```
 pip install -r requirements.txt
 pip install -e .
-'''
+```
 
 ##Running HAIDES
 
-We provide instructions to run HAIDES ont the '''nightstreet''' dataset, similar instructions apply to the '''WikiSQL''' and '''CelebA'''
+We provide instructions to run HAIDES ont the ```nightstreet``` dataset, similar instructions apply to the ```WikiSQL``` and ```CelebA```
